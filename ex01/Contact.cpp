@@ -9,9 +9,5 @@ Contact::Contact() {
 }
 
 Contact::~Contact() {
-    first_name = "";
-    last_name = "";
-    nickname = "";
-    phone_number = "";
-    secret = "";
+
 }
