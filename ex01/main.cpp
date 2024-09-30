@@ -57,17 +57,25 @@ void    prompt_function(Phonebook &book) {
 	while (1) {
 		std::cout << "Use a phonebook command from the manual :" << std::endl;
 		std::getline(std::cin, input);
+		if (input == "\0")
+			return ;
 		if (input == "ADD")
 		{
 			fillField(book, i); //int ou bool pour refaire le contact
 			i++;
 		}
 		else if (input == "SEARCH")
+		{
+			if (input == "\0")
+				exit(1) ;	
 			searchContact(book, i);
+		}
 		else if (input == "EXIT")
 			exit(1);
 		else
 		{
+			if (input == "\0")
+				exit(1);
 			std::cout << "\033[31m";
 			std::cout << "Wrong command or no command entered" << std::endl;
 			std::cout << "\033[0m";
@@ -79,7 +87,6 @@ void    prompt_function(Phonebook &book) {
 int main() {
 	Phonebook book;
 
-	signal(SIGINT, signalHandler);
 	std::cout << "\033[32m";
 	std::cout << "Welcome to the phonebook user interface !" << std::endl;
 	std::cout << "\033[0m";

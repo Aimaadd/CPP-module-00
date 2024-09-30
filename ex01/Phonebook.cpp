@@ -18,6 +18,8 @@ std::string    Phonebook::setString(const std::string &prompt) {
     do {
         std::cout << prompt << std::endl;
         getline(std::cin, input);
+        if (input == "\0")
+			exit(1);
     } while (input.empty() || hasSpaces(input) == 1);
     return input;
 }
