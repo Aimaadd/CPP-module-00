@@ -1,9 +1,9 @@
 CPPCOMPILER = c++
 CPPFLAGS = -Werror -Wextra -Wall -std=c++98 
-NAME = phonebook
+NAME = account
 RM = rm -rf
 
-SRCS = main.cpp Contact.cpp Phonebook.cpp
+SRCS = tests.cpp Account.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
