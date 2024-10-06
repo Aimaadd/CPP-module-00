@@ -1,5 +1,5 @@
 CPPCOMPILER = c++
-CPPFLAGS = -Werror -Wextra -Wall -std=c++98 -fsanitize=address -g3
+CPPFLAGS = -Werror -Wextra -Wall -std=c++98
 NAME = megaphone
 RM = rm -rf
 
